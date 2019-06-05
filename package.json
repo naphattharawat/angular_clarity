@@ -1,5 +1,5 @@
 {
-  "name": "ang",
+  "name": "web",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -22,7 +22,7 @@
     "@auth0/angular-jwt": "^2.1.0",
     "@clr/angular": "^1.1.3",
     "@clr/icons": "1.1.3",
-    "@clr/ui": "^1.1.3",
+    "@clr/ui": "1.1.3",
     "@webcomponents/custom-elements": "^1.0.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
