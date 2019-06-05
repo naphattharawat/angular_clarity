@@ -1,0 +1,33 @@
+<div class="main-container">
+  <header class="header">
+    <div class="branding">
+      <a href="javascript://" class="nav-link">
+        <img src="./assets/images/moph_logo.png" alt="moph_logo" style="width: 64px; padding-right: 10px;">
+        <span class="title">ระบบงาน</span>
+      </a>
+    </div>
+    <div class="header-actions">
+      <clr-dropdown>
+        <button class="nav-text" clrDropdownTrigger>
+          xxxxx@gmail.com
+          <clr-icon shape="caret down"></clr-icon>
+        </button>
+        <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+          <a href="javascript://" clrDropdownItem>เปลี่ยนรหัสผ่าน</a>
+          <a href="javascript://" clrDropdownItem>ออกจากโปรแกรม</a>
+        </clr-dropdown-menu>
+      </clr-dropdown>
+    </div>
+  </header>
+  <div class="content-container">
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+    <clr-vertical-nav [clrVerticalNavCollapsible]="collapsible" [(clrVerticalNavCollapsed)]="collapse">
+      <a clrVerticalNavLink routerLink="/customers/main" title="รายการแจ้งซ่อม" routerLinkActive="active">
+        <clr-icon clrVerticalNavIcon shape="note" class="has-badge is-solid"></clr-icon>
+        รายการแจ้งซ่อม
+      </a>
+    </clr-vertical-nav>
+  </div>
+</div>
