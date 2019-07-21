@@ -11,8 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { CustomersModule } from './customers/customers.module';
 import { AuthModule } from './auth/auth.module';
 import { AuthGuard } from './auth-guard.service';
-import { HttpClientModule } from '@angular/common/http';
-import { JwtModule } from '@auth0/angular-jwt';
+import { environment } from './../environments/environment';
 
 export function tokenGetter() {
   return sessionStorage.getItem('token');
@@ -33,7 +32,7 @@ export function tokenGetter() {
     CustomersModule,
   ],
   providers: [
-    { provide: 'API_URL', useValue: 'http://localhost:3000' },
+    { provide: 'API_URL', useValue: environment.apiUrl },
     AuthGuard,
     { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
